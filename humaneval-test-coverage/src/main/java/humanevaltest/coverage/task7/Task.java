@@ -2,7 +2,7 @@ package humanevaltest.coverage.task7;
 
 import java.util.*;
 
-class Solution {
+class Task {
     public List<String> filterBySubstring(List<String> strings, String substring) {
         List<String> result = new ArrayList<>();
         for (String x : strings) {
