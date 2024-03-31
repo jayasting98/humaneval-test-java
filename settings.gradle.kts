@@ -3,4 +3,4 @@ plugins {
 }
 
 rootProject.name = "humaneval-test-java"
-include("humaneval-test-unit")
+include("humaneval-test-coverage")
