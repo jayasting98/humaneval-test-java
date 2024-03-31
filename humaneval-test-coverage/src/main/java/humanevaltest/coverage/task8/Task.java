@@ -2,7 +2,7 @@ package humanevaltest.coverage.task8;
 
 import java.util.*;
 
-class Solution {
+class Task {
     public List<Integer> sumProduct(List<Integer> numbers) {
         int sum = 0;
         int product = 1;
