@@ -2,7 +2,7 @@ package humanevaltest.coverage.task0;
 
 import java.util.*;
 
-class Solution {
+class Task {
     public boolean hasCloseElements(List<Double> numbers, double threshold) {
         for (int i = 0; i < numbers.size(); i++) {
             for (int j = i + 1; j < numbers.size(); j++) {
