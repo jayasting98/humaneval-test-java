@@ -2,7 +2,7 @@ package humanevaltest.coverage.task9;
 
 import java.util.*;
 
-class Solution {
+class Task {
     public List<Integer> rollingMax(List<Integer> numbers) {
         List<Integer> result = new ArrayList<>();
         if (numbers.size() == 0) {
