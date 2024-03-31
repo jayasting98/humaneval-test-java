@@ -1,8 +1,6 @@
 package humanevaltest.coverage.task10;
 
-import java.util.*;
-
-class Solution {
+class Task {
     /**
     Test if given string is a palindrome
      */
