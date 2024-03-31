@@ -2,7 +2,7 @@ package humanevaltest.coverage.task1;
 
 import java.util.*;
 
-class Solution {
+class Task {
     public List<String> separateParenGroups(String paren_string) {
         List<String> result = new ArrayList<>();
         StringBuilder current_string = new StringBuilder();
