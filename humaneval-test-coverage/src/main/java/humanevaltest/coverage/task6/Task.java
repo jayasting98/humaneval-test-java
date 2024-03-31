@@ -2,7 +2,7 @@ package humanevaltest.coverage.task6;
 
 import java.util.*;
 
-class Solution {
+class Task {
     public List<Integer> parseNestedParens(String paren_string) {
         String[] groups = paren_string.split(" ");
         List<Integer> result = new ArrayList<>(List.of());
