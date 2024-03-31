@@ -2,7 +2,7 @@ package humanevaltest.coverage.task4;
 
 import java.util.*;
 
-class Solution {
+class Task {
     public double meanAbsoluteDeviation(List<Double> numbers) {
         double sum = 0.0;
         for (double num : numbers) {
