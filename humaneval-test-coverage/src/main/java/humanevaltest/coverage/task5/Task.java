@@ -2,7 +2,7 @@ package humanevaltest.coverage.task5;
 
 import java.util.*;
 
-class Solution {
+class Task {
     public List<Integer> intersperse(List<Integer> numbers, int delimiter) {
         if (numbers.size() == 0) {
             return List.of();
