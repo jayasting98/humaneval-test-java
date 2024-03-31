@@ -1,7 +1,6 @@
 package humanevaltest.unit.task65;
 
 import java.util.*;
-import java.lang.*;
 
 class Solution {
     public String circularShift(int x, int shift) {

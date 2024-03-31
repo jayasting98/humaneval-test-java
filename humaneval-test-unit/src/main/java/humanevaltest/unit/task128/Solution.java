@@ -1,7 +1,6 @@
 package humanevaltest.unit.task128;
 
 import java.util.*;
-import java.lang.*;
 
 class Solution {
     public Optional<Integer> prodSigns(List<Integer> arr) {

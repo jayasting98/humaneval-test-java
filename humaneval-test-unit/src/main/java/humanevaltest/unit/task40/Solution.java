@@ -1,7 +1,6 @@
 package humanevaltest.unit.task40;
 
 import java.util.*;
-import java.lang.*;
 
 class Solution {
     public boolean triplesSumToZero(List<Integer> l) {

@@ -1,7 +1,6 @@
 package humanevaltest.unit.task57;
 
 import java.util.*;
-import java.lang.*;
 
 class Solution {
     public boolean monotonic(List<Integer> l) {

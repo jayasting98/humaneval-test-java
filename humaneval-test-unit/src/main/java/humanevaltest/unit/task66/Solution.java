@@ -1,7 +1,6 @@
 package humanevaltest.unit.task66;
 
 import java.util.*;
-import java.lang.*;
 
 class Solution {
     public int digitSum(String s) {

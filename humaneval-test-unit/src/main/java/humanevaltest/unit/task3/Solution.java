@@ -1,7 +1,6 @@
 package humanevaltest.unit.task3;
 
 import java.util.*;
-import java.lang.*;
 
 class Solution {
     public boolean belowZero(List<Integer> operations) {

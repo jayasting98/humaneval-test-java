@@ -1,7 +1,6 @@
 package humanevaltest.unit.task102;
 
 import java.util.*;
-import java.lang.*;
 
 class Solution {
     public int chooseNum(int x, int y) {

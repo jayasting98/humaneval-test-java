@@ -1,7 +1,6 @@
 package humanevaltest.unit.task75;
 
 import java.util.*;
-import java.lang.*;
 
 class Solution {
     public boolean isMultiplyPrime(int a) {

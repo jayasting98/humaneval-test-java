@@ -1,7 +1,6 @@
 package humanevaltest.unit.task10;
 
 import java.util.*;
-import java.lang.*;
 
 class Solution {
     /**

@@ -1,7 +1,6 @@
 package humanevaltest.unit.task62;
 
 import java.util.*;
-import java.lang.*;
 
 class Solution {
     public List<Integer> derivative(List<Integer> xs) {

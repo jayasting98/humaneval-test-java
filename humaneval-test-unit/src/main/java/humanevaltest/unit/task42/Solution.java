@@ -1,7 +1,6 @@
 package humanevaltest.unit.task42;
 
 import java.util.*;
-import java.lang.*;
 import java.util.stream.Collectors;
 
 class Solution {

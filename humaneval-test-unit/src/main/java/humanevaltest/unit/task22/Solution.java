@@ -1,7 +1,6 @@
 package humanevaltest.unit.task22;
 
 import java.util.*;
-import java.lang.*;
 
 class Solution {
     public List<Integer> filterIntegers(List<Object> values) {

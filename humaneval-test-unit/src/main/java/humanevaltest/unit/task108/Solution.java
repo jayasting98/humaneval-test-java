@@ -1,7 +1,6 @@
 package humanevaltest.unit.task108;
 
 import java.util.*;
-import java.lang.*;
 
 class Solution {
     public int countNums(List<Integer> arr) {

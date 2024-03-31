@@ -1,7 +1,6 @@
 package humanevaltest.unit.task95;
 
 import java.util.*;
-import java.lang.*;
 
 class Solution {
     public boolean checkDictCase(Map<Object, Object> dict) {

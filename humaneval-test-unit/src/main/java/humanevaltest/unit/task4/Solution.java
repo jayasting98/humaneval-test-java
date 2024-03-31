@@ -1,7 +1,6 @@
 package humanevaltest.unit.task4;
 
 import java.util.*;
-import java.lang.*;
 
 class Solution {
     public double meanAbsoluteDeviation(List<Double> numbers) {

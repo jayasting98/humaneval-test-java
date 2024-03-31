@@ -1,7 +1,6 @@
 package humanevaltest.unit.task145;
 
 import java.util.*;
-import java.lang.*;
 
 class Solution {
     public List<Integer> orderByPoints(List<Integer> nums) {

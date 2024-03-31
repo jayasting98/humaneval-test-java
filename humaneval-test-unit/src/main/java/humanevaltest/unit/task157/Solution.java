@@ -1,7 +1,6 @@
 package humanevaltest.unit.task157;
 
 import java.util.*;
-import java.lang.*;
 
 class Solution {
     public boolean rightAngleTriangle(int a, int b, int c) {

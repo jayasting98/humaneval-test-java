@@ -1,7 +1,6 @@
 package humanevaltest.unit.task77;
 
 import java.util.*;
-import java.lang.*;
 
 class Solution {
     public boolean iscube(int a) {

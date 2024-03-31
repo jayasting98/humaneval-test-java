@@ -1,7 +1,6 @@
 package humanevaltest.unit.task31;
 
 import java.util.*;
-import java.lang.*;
 
 class Solution {
     public boolean isPrime(int n) {

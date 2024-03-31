@@ -1,7 +1,6 @@
 package humanevaltest.unit.task134;
 
 import java.util.*;
-import java.lang.*;
 
 class Solution {
     public boolean checkIfLastCharIsALetter(String txt) {

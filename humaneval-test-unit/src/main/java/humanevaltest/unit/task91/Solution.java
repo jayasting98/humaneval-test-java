@@ -1,7 +1,6 @@
 package humanevaltest.unit.task91;
 
 import java.util.*;
-import java.lang.*;
 
 class Solution {
     public int isBored(String S) {

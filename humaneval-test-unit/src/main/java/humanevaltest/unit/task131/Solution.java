@@ -1,7 +1,6 @@
 package humanevaltest.unit.task131;
 
 import java.util.*;
-import java.lang.*;
 
 class Solution {
     public int digits(int n) {

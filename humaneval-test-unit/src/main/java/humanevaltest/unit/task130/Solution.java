@@ -1,7 +1,6 @@
 package humanevaltest.unit.task130;
 
 import java.util.*;
-import java.lang.*;
 
 class Solution {
     public List<Integer> tri(int n) {

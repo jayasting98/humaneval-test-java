@@ -1,7 +1,6 @@
 package humanevaltest.unit.task98;
 
 import java.util.*;
-import java.lang.*;
 
 class Solution {
     public int countUpper(String s) {

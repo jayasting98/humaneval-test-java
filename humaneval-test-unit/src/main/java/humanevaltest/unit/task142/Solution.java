@@ -1,7 +1,6 @@
 package humanevaltest.unit.task142;
 
 import java.util.*;
-import java.lang.*;
 
 class Solution {
     public int sumSquares(List<Integer> lst) {
