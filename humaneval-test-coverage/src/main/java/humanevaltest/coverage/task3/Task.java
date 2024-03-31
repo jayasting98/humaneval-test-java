@@ -2,7 +2,7 @@ package humanevaltest.coverage.task3;
 
 import java.util.*;
 
-class Solution {
+class Task {
     public boolean belowZero(List<Integer> operations) {
         int balance = 0;
 
