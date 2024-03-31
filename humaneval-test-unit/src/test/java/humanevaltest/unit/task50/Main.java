@@ -1,5 +1,7 @@
 package humanevaltest.unit.task50;
 
+import java.util.*;
+
 public class Main {
     static char[] letters = "abcdefghijklmnopqrstuvwxyz".toCharArray();
     static Random rand = new Random(42);
