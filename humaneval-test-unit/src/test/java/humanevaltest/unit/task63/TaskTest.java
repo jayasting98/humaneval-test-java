@@ -1,0 +1,21 @@
+package humanevaltest.unit.task63;
+
+import java.util.*;
+
+public class TaskTest {
+    public static void main(String[] args) {
+        Task s = new Task();
+        List<Boolean> correct = Arrays.asList(
+                s.fibfib(2) == 1,
+                s.fibfib(1) == 0,
+                s.fibfib(5) == 4,
+                s.fibfib(8) == 24,
+                s.fibfib(10) == 81,
+                s.fibfib(12) == 274,
+                s.fibfib(14) == 927
+        );
+        if (correct.contains(false)) {
+            throw new AssertionError();
+        }
+    }
+}
