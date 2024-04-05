@@ -1,8 +1,6 @@
 package humanevaltest.unit.task11;
 
-import java.util.*;
-
-class Solution {
+class Task {
     public String stringXor(String a, String b) {
         StringBuilder result = new StringBuilder();
         for (int i = 0; i < a.length(); i++) {
