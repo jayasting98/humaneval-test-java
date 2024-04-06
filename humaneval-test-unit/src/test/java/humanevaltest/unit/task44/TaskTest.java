@@ -1,25 +1,28 @@
 package humanevaltest.unit.task44;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.*;
 
+import org.junit.jupiter.api.Test;
+
 public class TaskTest {
-    public static void main(String[] args) {
-        Task s = new Task();
-        List<Boolean> correct = Arrays.asList(
-                Objects.equals(s.changeBase(8, 3), "22"),
-                Objects.equals(s.changeBase(9, 3), "100"),
-                Objects.equals(s.changeBase(234, 2), "11101010"),
-                Objects.equals(s.changeBase(16, 2), "10000"),
-                Objects.equals(s.changeBase(8, 2), "1000"),
-                Objects.equals(s.changeBase(7, 2), "111")
-        );
-        if (correct.contains(false)) {
-            throw new AssertionError();
-        }
+    @Test
+    public void testChangeBase_notLessThanBase_changesBase() {
+        Task task = new Task();
+        assertEquals("22", task.changeBase(8, 3));
+        assertEquals("100", task.changeBase(9, 3));
+        assertEquals("11101010", task.changeBase(234, 2));
+        assertEquals("10000", task.changeBase(16, 2));
+        assertEquals("1000", task.changeBase(8, 2));
+        assertEquals("111", task.changeBase(7, 2));
+    }
+
+    @Test
+    public void testChangeBase_lessThanBase_sameNumber() {
+        Task task = new Task();
         for (int x = 2; x < 8; x++) {
-            if (!Objects.equals(s.changeBase(x, x + 1), String.valueOf(x))) {
-                throw new AssertionError();
-            }
+            assertEquals(String.valueOf(x), task.changeBase(x, x + 1));
         }
     }
 }
