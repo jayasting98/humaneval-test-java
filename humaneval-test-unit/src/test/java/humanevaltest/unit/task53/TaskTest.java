@@ -1,26 +1,29 @@
 package humanevaltest.unit.task53;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.*;
 
+import org.junit.jupiter.api.Test;
+
 public class TaskTest {
-    public static void main(String[] args) {
-        Task s = new Task();
+    @Test
+    public void testAdd_typicalOperands_addsCorrectly() {
+        Task task = new Task();
+        assertEquals(1, task.add(0, 1));
+        assertEquals(1, task.add(1, 0));
+        assertEquals(5, task.add(2, 3));
+        assertEquals(12, task.add(5, 7));
+        assertEquals(12, task.add(7, 5));
+    }
+
+    @Test
+    public void testAdd_randomOperands_addsCorrectly() {
+        Task task = new Task();
         Random rand = new Random(42);
-        List<Boolean> correct = Arrays.asList(
-                s.add(0, 1) == 1,
-                s.add(1, 0) == 1,
-                s.add(2, 3) == 5,
-                s.add(5, 7) == 12,
-                s.add(7, 5) == 12
-        );
-        if (correct.contains(false)) {
-            throw new AssertionError();
-        }
         for (int i = 0; i < 100; i++) {
             int x = rand.nextInt(1000), y = rand.nextInt(1000);
-            if (s.add(x, y) != x + y) {
-                throw new AssertionError();
-            }
+            assertEquals(x + y, task.add(x, y));
         }
     }
 }
