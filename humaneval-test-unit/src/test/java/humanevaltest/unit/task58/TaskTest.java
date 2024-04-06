@@ -1,18 +1,49 @@
 package humanevaltest.unit.task58;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.*;
 
+import org.junit.jupiter.api.Test;
+
 public class TaskTest {
-    public static void main(String[] args) {
-        Task s = new Task();
-        List<Boolean> correct = Arrays.asList(
-                s.common(new ArrayList<>(Arrays.asList(1, 4, 3, 34, 653, 2, 5)), new ArrayList<>(Arrays.asList(5, 7, 1, 5, 9, 653, 121))).equals(Arrays.asList(1, 5, 653)),
-                s.common(new ArrayList<>(Arrays.asList(5, 3, 2, 8)), new ArrayList<>(Arrays.asList(3, 2))).equals(Arrays.asList(2, 3)),
-                s.common(new ArrayList<>(Arrays.asList(4, 3, 2, 8)), new ArrayList<>(Arrays.asList(3, 2, 4))).equals(Arrays.asList(2, 3, 4)),
-                s.common(new ArrayList<>(Arrays.asList(4, 3, 2, 8)), new ArrayList<>(List.of())).equals(List.of())
-        );
-        if (correct.contains(false)) {
-            throw new AssertionError();
-        }
+    @Test
+    public void testCommon_someCommonElements0_returnsSortedCommonElements() {
+        Task task = new Task();
+        List<Integer> numbers1 = Arrays.asList(1, 4, 3, 34, 653, 2, 5);
+        List<Integer> numbers2 = Arrays.asList(5, 7, 1, 5, 9, 653, 121);
+        List<Integer> expectedCommonNumbers = Arrays.asList(1, 5, 653);
+        List<Integer> actualCommonNumbers = task.common(numbers1, numbers2);
+        assertEquals(expectedCommonNumbers, actualCommonNumbers);
+    }
+
+    @Test
+    public void testCommon_someCommonElements1_returnsSortedCommonElements() {
+        Task task = new Task();
+        List<Integer> numbers1 = Arrays.asList(5, 3, 2, 8);
+        List<Integer> numbers2 = Arrays.asList(3, 2);
+        List<Integer> expectedCommonNumbers = Arrays.asList(2, 3);
+        List<Integer> actualCommonNumbers = task.common(numbers1, numbers2);
+        assertEquals(expectedCommonNumbers, actualCommonNumbers);
+    }
+
+    @Test
+    public void testCommon_someCommonElements2_returnsSortedCommonElements() {
+        Task task = new Task();
+        List<Integer> numbers1 = Arrays.asList(4, 3, 2, 8);
+        List<Integer> numbers2 = Arrays.asList(3, 2, 4);
+        List<Integer> expectedCommonNumbers = Arrays.asList(2, 3, 4);
+        List<Integer> actualCommonNumbers = task.common(numbers1, numbers2);
+        assertEquals(expectedCommonNumbers, actualCommonNumbers);
+    }
+
+    @Test
+    public void testCommon_oneEmptyList_returnsNoCommonElements() {
+        Task task = new Task();
+        List<Integer> numbers1 = Arrays.asList(4, 3, 2, 8);
+        List<Integer> numbers2 = List.of();
+        List<Integer> expectedCommonNumbers = List.of();
+        List<Integer> actualCommonNumbers = task.common(numbers1, numbers2);
+        assertEquals(expectedCommonNumbers, actualCommonNumbers);
     }
 }
