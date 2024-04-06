@@ -1,10 +1,15 @@
 package humanevaltest.unit.task32;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.*;
 
+import org.junit.jupiter.api.Test;
+
 public class TaskTest {
-    public static void main(String[] args) {
-        Task s = new Task();
+    @Test
+    public void testFindZero_randomPolynomials_findsZero() {
+        Task task = new Task();
         Random rand = new Random(42);
         for (int i = 0; i < 100; i++) {
             int ncoeff = 2 * (rand.nextInt(3) + 1);
@@ -16,10 +21,11 @@ public class TaskTest {
                 }
                 coeffs.add((double) coeff);
             }
-            double solution = s.findZero(coeffs);
-            if (Math.abs(s.poly(coeffs, solution)) > 1e-4) {
-                throw new AssertionError();
-            }
+            double solution = task.findZero(coeffs);
+            double delta = 1e-4;
+            double expectedValueAtRoot = 0.0;
+            double actualValueAtRoot = Math.abs(task.poly(coeffs, solution));
+            assertEquals(expectedValueAtRoot, actualValueAtRoot, delta);
         }
     }
 }
