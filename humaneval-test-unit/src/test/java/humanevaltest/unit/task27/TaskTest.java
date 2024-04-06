@@ -1,17 +1,36 @@
 package humanevaltest.unit.task27;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.*;
 
+import org.junit.jupiter.api.Test;
+
 public class TaskTest {
-    public static void main(String[] args) {
-        Task s = new Task();
-        List<Boolean> correct = Arrays.asList(
-                Objects.equals(s.flipCase(""), ""),
-                Objects.equals(s.flipCase("Hello!"), "hELLO!"),
-                Objects.equals(s.flipCase("These violent delights have violent ends"), "tHESE VIOLENT DELIGHTS HAVE VIOLENT ENDS")
-        );
-        if (correct.contains(false)) {
-            throw new AssertionError();
-        }
+    @Test
+    public void testFlipCase_emptyString_flipsNothing() {
+        Task task = new Task();
+        String string = "";
+        String expectedFlippedCaseString = "";
+        String actualFlippedCaseString = task.flipCase(string);
+        assertEquals(expectedFlippedCaseString, actualFlippedCaseString);
+    }
+
+    @Test
+    public void testFlipCase_withNonAlphabet_flipsAlphabets() {
+        Task task = new Task();
+        String string = "Hello!";
+        String expectedFlippedCaseString = "hELLO!";
+        String actualFlippedCaseString = task.flipCase(string);
+        assertEquals(expectedFlippedCaseString, actualFlippedCaseString);
+    }
+
+    @Test
+    public void testFlipCase_multipleWords_flipsAlphabetsInWords() {
+        Task task = new Task();
+        String string = "These violent delights have violent ends";
+        String expectedFlippedCaseString = "tHESE VIOLENT DELIGHTS HAVE VIOLENT ENDS";
+        String actualFlippedCaseString = task.flipCase(string);
+        assertEquals(expectedFlippedCaseString, actualFlippedCaseString);
     }
 }
