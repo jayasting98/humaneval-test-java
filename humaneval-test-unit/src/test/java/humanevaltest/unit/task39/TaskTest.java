@@ -1,24 +1,29 @@
 package humanevaltest.unit.task39;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.*;
 
+import org.junit.jupiter.api.Test;
+
 public class TaskTest {
-    public static void main(String[] args) {
-        Task s = new Task();
-        List<Boolean> correct = Arrays.asList(
-                s.primeFib(1) == 2,
-                s.primeFib(2) == 3,
-                s.primeFib(3) == 5,
-                s.primeFib(4) == 13,
-                s.primeFib(5) == 89,
-                s.primeFib(6) == 233,
-                s.primeFib(7) == 1597,
-                s.primeFib(8) == 28657,
-                s.primeFib(9) == 514229,
-                s.primeFib(10) == 433494437
-        );
-        if (correct.contains(false)) {
-            throw new AssertionError();
-        }
+    @Test
+    public void testPrimeFib_noEarlierPrimeFibonacciNumbers_returnsFibonacciNumber() {
+        Task task = new Task();
+        assertEquals(2, task.primeFib(1));
+        assertEquals(3, task.primeFib(2));
+        assertEquals(5, task.primeFib(3));
+    }
+
+    @Test
+    public void testPrimeFib_someEarlierPrimeFibonacciNumbers_returnsPrimeFibonacciNumber() {
+        Task task = new Task();
+        assertEquals(13, task.primeFib(4));
+        assertEquals(89, task.primeFib(5));
+        assertEquals(233, task.primeFib(6));
+        assertEquals(1597, task.primeFib(7));
+        assertEquals(28657, task.primeFib(8));
+        assertEquals(514229, task.primeFib(9));
+        assertEquals(433494437, task.primeFib(10));
     }
 }
