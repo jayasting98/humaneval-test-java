@@ -1,17 +1,17 @@
 package humanevaltest.unit.task45;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.*;
 
+import org.junit.jupiter.api.Test;
+
 public class TaskTest {
-    public static void main(String[] args) {
-        Task s = new Task();
-        List<Boolean> correct = Arrays.asList(
-                s.triangleArea(5, 3) == 7.5,
-                s.triangleArea(2, 2) == 2.0,
-                s.triangleArea(10, 8) == 40.0
-        );
-        if (correct.contains(false)) {
-            throw new AssertionError();
-        }
+    @Test
+    public void testTriangleArea_typicalCase_calculatesCorrectly() {
+        Task task = new Task();
+        assertEquals(7.5, task.triangleArea(5, 3));
+        assertEquals(2.0, task.triangleArea(2, 2));
+        assertEquals(40.0, task.triangleArea(10, 8));
     }
 }
